@@ -28,7 +28,7 @@ include("utils/time_frequency_analysis.jl")
 MMR_S = false     # whether to use MMRS or MMRL measurement
 dataDir = "data/Experiment_2"   # directory where data is stored, needs to be adapted depending on whethere Experiment_1 or Experiment_2 data should be used
 frameNo = 40          # frame on which to do single frame plots
-tRX1 = 1.0            # percentage of RX1 size to use for fitting (e.g. 0.5 means we only use the first 50% of RX1 data for fitting)
+tRX1 = 0.5            # percentage of RX1 size to use for fitting (e.g. 0.5 means we only use the first 50% of RX1 data for fitting)
 if MMR_S
     @info "Using MMR S"
     dataName = "MMRS.h5"
@@ -136,6 +136,7 @@ for ch in 1:size(filteredData,2)
   ax = Axis(fig[ch, col:col+1], title="Channel $ch", xlabel="t / s", ylabel="s(t) / V")
   lines!(ax, times, filteredData[:,ch], label=L"s^{\mathrm{meas}}", color=colors[1])
   lines!(ax, times, dataFit[:,ch], label=L"s^{\mathrm{T}}", color=colors[2])
+  vlines!(ax, times[idx], color=colors[3], linestyle=:dash, label=L"T_{\mathrm{RX1}}")
   xlims!(ax, times[1], times[end])
   ylims!(ax, ymin, ymax)
   if ch == 1
