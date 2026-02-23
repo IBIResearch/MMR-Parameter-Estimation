@@ -26,7 +26,8 @@ include("utils/time_frequency_analysis.jl")
 # general settings #
 ####################
 MMR_S = false     # whether to use MMRS or MMRL measurement
-dataDir = "data/Experiment_2"   # directory where data is stored, needs to be adapted depending on whethere Experiment_1 or Experiment_2 data should be used
+experimentNo = 2   # whether to use Experiment_1 or Experiment_2 data
+dataDir = "data/Exp$(experimentNo)_"   # directory where data is stored, needs to be adapted depending on whethere Experiment_1 or Experiment_2 data should be used
 frameNo = 40          # frame on which to do single frame plots
 tRX1 = 0.5            # percentage of RX1 size to use for fitting (e.g. 0.5 means we only use the first 50% of RX1 data for fitting)
 if MMR_S
@@ -56,7 +57,7 @@ order = 4                           # order of Butterworth filter
 # Load Data #
 #############
 @info "Loading data..."
-data, fs = readDataFromHDF5(joinpath(dataDir, dataName))
+data, fs = readDataFromHDF5(dataDir*dataName)
 
 ########################################
 # settings parameter estimation method #  
