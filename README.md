@@ -1,14 +1,12 @@
 #  Parameter Estimation for Model-Based Sensing of Magneto-Mechanical Resonators
 This repository contains code for estimating the required parameters to model the dynamics of magneto-mechanical resonators (MMRs). The torsion model is the focus of this code example.
 
-The method corresponding to this code is described in the associated publication.
-
-*To be announced.*
+The method corresponding to this code is described in the associated publication (see below).
 
 ## Installation
 In order to use this code, one first has to download [Julia](https://julialang.org/) (version 1.11 or later) and clone this repository.
 
-Download the data from the MISSING and place it in the `data` directory.
+Download the data from [here](https://doi.org/10.15480/882.16742) and place it in the `data` directory.
 You should end up with the following structure:
 ```
 .
@@ -29,5 +27,14 @@ to estimate the parameters and reconstruct the measured signal. The example scri
 
 ## Citation
 If you use this code in your research, please cite the following paper:
-
-*To be announced.*
+```bibtex
+@misc{reiss2026parameterestimationmodelbasedsensing,
+      title={Parameter Estimation for Model-Based Sensing of Magneto-Mechanical Resonators}, 
+      author={Sarah Reiss and Tobias Knopp and Justin Ackers and Jonas Faltinath and Fabian Mohn and Marija Boberg and Nora Timm and Martin Möddel},
+      year={2026},
+      eprint={2602.19965},
+      archivePrefix={arXiv},
+      primaryClass={physics.app-ph},
+      url={https://arxiv.org/abs/2602.19965}, 
+}
+```
