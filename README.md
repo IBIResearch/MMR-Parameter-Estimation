@@ -28,13 +28,15 @@ to estimate the parameters and reconstruct the measured signal. The example scri
 ## Citation
 If you use this code in your research, please cite the following paper:
 ```bibtex
-@misc{reiss2026parameterestimationmodelbasedsensing,
-      title={Parameter Estimation for Model-Based Sensing of Magneto-Mechanical Resonators}, 
-      author={Sarah Reiss and Tobias Knopp and Justin Ackers and Jonas Faltinath and Fabian Mohn and Marija Boberg and Nora Timm and Martin Möddel},
-      year={2026},
-      eprint={2602.19965},
-      archivePrefix={arXiv},
-      primaryClass={physics.app-ph},
-      url={https://arxiv.org/abs/2602.19965}, 
+@article{reiss_parameter_2026,
+	title = {Parameter {Estimation} for {Model}-{Based} {Sensing} of {Magneto}-{Mechanical} {Resonators}},
+	volume = {9},
+	issn = {2399-3650},
+	doi = {10.1038/s42005-026-02884-1},
+	journal = {Communications Physics},
+	author = {Reiss, Sarah and Knopp, Tobias and Ackers, Justin and Faltinath, Jonas and Mohn, Fabian and Boberg, Marija and Timm, Nora and Möddel, Martin},
+	month = oct,
+	year = {2026},
 }
+
 ```
